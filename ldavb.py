@@ -19,13 +19,6 @@ def dirichlet_expectation(alpha):
     return (psi(alpha)-psi(np.sum(alpha, 1))[:,np.newaxis])
 
 class vbLDA:
-    """
-    Latent dirichlet allocation,
-    Blei, David M and Ng, Andrew Y and Jordan, Michael I, 2003
-    
-    Latent Dirichlet allocation with mean field variational inference
-    """
-
     def __init__(self, vocab, K, wordids, wordcts, alpha=0.1, eta=0.01):
         """
         Arguments: 
